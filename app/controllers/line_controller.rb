@@ -38,7 +38,7 @@ def bot
       #DBへの登録処理開始
       begin
         #メッセージの文字列をタスクテーブルに登録
-        Task.create!(task:task)
+        Task.create!(task: task)
 
         #登録に成功した場合、登録した旨をLINEで返す
         message = {type: 'text', text: "タスク『#{task}』を登録しました！"}
@@ -52,7 +52,7 @@ def bot
     end
   end
   }
-  head:ok
+  head :ok
 end
 
 #LINEボットを生成して返すプライベートメソッドの定義
