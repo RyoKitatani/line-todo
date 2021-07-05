@@ -73,6 +73,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    line-bot-api (1.19.0)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -181,6 +182,7 @@ DEPENDENCIES
   byebug
   faker
   jbuilder (~> 2.7)
+  line-bot-api
   listen (~> 3.2)
   mysql2 (>= 0.5.3)
   puma (~> 4.1)
