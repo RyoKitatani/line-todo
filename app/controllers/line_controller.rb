@@ -29,7 +29,7 @@ def bot
     when Line::Bot::Event::Message
 
       #メッセージのタイプがテキストだったら（スタンプ等ではなく）
-      case event.type 
+      case event.type
       when Line::Bot::Event::MessageType::Text
 
       #メッセージの文字列を取得して、変数taskに代入
@@ -57,10 +57,11 @@ end
 
 #LINEボットを生成して返すプライベートメソッドの定義
 private
+
   def client
     @client || = Line::Bot::Client.new{|config|
       #サーバに事前に登録したチャネルシークレットとチャネルトークンをセット
     config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
     config.channel_token = ENV["LINE_CHANNEL_TOKEN"]}
+  end
 end
-
